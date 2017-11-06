@@ -1,5 +1,5 @@
 # Linux related pages
-------
+	------
 
 ## Add Service to ubuntu
 ------
@@ -50,4 +50,29 @@ All service and software install process and configure
    sudo certutil -d sql:$HOME/.pki/nssdb -A -t TC -n "goagent" -i ./data/gae_proxy/CA.crt
 ```
 
-## 
+## Add a user to sudoers
+
+su - root
+
+ls -l /etc/sudoers
+ -r--r-----. 1 root root 4030 9月  25 00:57 /etc/sudoers
+ [root@Compile user]# chmod 777 /etc/sudoers
+ [root@Compile user]# ls -l /etc/sudoers
+ -rwxrwxrwx. 1 root root 4030 9月  25 00:57 /etc/sudoers
+ 
+chmod 440 /etc/sudoers
+[root@Compile user]# ls -l /etc/sudoers
+
+
+## In recovery Mode
+
+1. Keep shift button down, until you get into Recovery mode, while starting the Linux
+2. Enter the root shell (Login with correct password of root)
+3. mount -o remount rw /
+4. Do something you need to do
+5. exit
+
+
+## Launcher
+
+/home/jean/.local/share/applications
